@@ -1,6 +1,8 @@
 package com.company.project.commom;
 
-
+/**
+ * @author xiaorui
+ */
 public class ServiceException extends RuntimeException {
     public ServiceException() {
     }

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
+ * @author xiaorui
  * RestController 异常统一拦截
  */
 @RestControllerAdvice
@@ -17,7 +18,7 @@ public class ExceptionControllerAdvice {
      * @return 统一数据返回
      */
     @ExceptionHandler(ServiceException.class)
-    public ApiResponse ServiceExceptionHandler(ServiceException e){
+    public ApiResponse serviceExceptionHandler(ServiceException e){
         log.error("捕获到ServiceException异常",e);
 
         return ApiResponse.ofFail(e.getMessage());
@@ -29,7 +30,7 @@ public class ExceptionControllerAdvice {
      * @return 统一数据返回
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ApiResponse MethodArgumentNotValidExceptionHandler(MethodArgumentNotValidException e){
+    public ApiResponse methodArgumentNotValidExceptionHandler(MethodArgumentNotValidException e){
         log.error("捕获到MethodArgumentNotValidException异常",e);
 
         return ApiResponse.ofFail(e.getMessage());

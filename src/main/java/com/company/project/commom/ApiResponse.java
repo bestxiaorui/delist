@@ -3,6 +3,7 @@ package com.company.project.commom;
 import lombok.Data;
 
 /**
+ * @author xiaorui
  * 统一数据返回类型
  * 一般来说直接调用静态方法就行，也可以自定义。
  */
@@ -52,10 +53,14 @@ public class ApiResponse {
     public enum Status{
         //一些状态码的描述
         INTERNAL_SERVER_ERROR(500,"INTERNAL_SERVER_ERROR"),
-        SUCCESS(200,"SUCCESS"),//成功
-        FAIL(400,"FAIL"),//失败
-        UNAUTHORIZED(401,"UNAUTHORIZED"),//未认证（签名错误）
-        NOT_FOUND(404,"NOT_FOUND");//接口不存在
+        //成功
+        SUCCESS(200,"SUCCESS"),
+        //失败
+        FAIL(400,"FAIL"),
+        //未认证（签名错误）
+        UNAUTHORIZED(401,"UNAUTHORIZED"),
+        //接口不存在
+        NOT_FOUND(404,"NOT_FOUND");
         private int code;
         private String standardMessage;
 

@@ -1,4 +1,4 @@
-package com.company.project.system.Restcontroller;
+package com.company.project.system.restcontroller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-04-20
  */
 @RestController
-@RequestMapping("/core/d-delist-notice")
-public class DDelistNoticeController {
+@RequestMapping("/core/d-banner")
+public class DBannerController {
 
 }
