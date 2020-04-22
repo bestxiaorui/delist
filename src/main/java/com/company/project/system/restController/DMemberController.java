@@ -2,6 +2,7 @@ package com.company.project.system.restController;
 
 
 import com.company.project.commom.ServiceException;
+import com.company.project.system.entity.vo.DMemberLikeVo;
 import com.company.project.system.entity.vo.DMemberUpdateVo;
 import com.company.project.system.entity.vo.DMemberVo;
 import com.company.project.system.service.IDMemberService;
@@ -57,5 +58,11 @@ public class DMemberController {
     public int updateEmail(@RequestBody @Valid DMemberUpdateVo memberUpdateVo) {
 
         return memberService.updateEmailById(memberUpdateVo);
+    }
+
+    @PostMapping("/LikeSelect")
+    @ResponseBody
+    public List<DMemberVo> likeSelect(@RequestBody @Valid DMemberLikeVo memberLikeVo){
+        return memberService.getMemberListLike(memberLikeVo);
     }
 }

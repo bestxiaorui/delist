@@ -73,7 +73,7 @@ public class test extends Tester{
 
     @Test
     public void test5(){
-        DMemberLikeVo dMemberLikeVo = new DMemberLikeVo().setMemberType("会员").setOrganization("阿");
+        DMemberLikeVo dMemberLikeVo = new DMemberLikeVo().setMemberType("综合类会员").setOrganization("阿");
         System.out.println(idMemberService.getMemberListLike(dMemberLikeVo));
     }
 }

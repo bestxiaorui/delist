@@ -6,14 +6,12 @@ import lombok.experimental.Accessors;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 public class DMemberUpdateVo {
 
-    @NotNull(message = "id不能为空")
     @NotBlank(message = "id不能为空")
     private String id;
 
