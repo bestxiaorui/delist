@@ -66,9 +66,9 @@ public class DUserController {
         return result;
     }
 
-    @PostMapping("/delect")
+    @PostMapping("/delete")
     @ResponseBody
-    public boolean delectUser(@RequestBody String id){
+    public boolean deleteUser(@RequestBody String id){
         boolean result = userService.removeById(id);
         if(!result){
             throw new ServiceException("删除失败");

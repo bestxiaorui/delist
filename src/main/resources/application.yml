@@ -17,14 +17,16 @@ spring:
     # 关闭mybatis-plus的banner打印
     global-config:
       banner: false
-#  logging:
-#    config: classpath:logback-dev.xml
-
   output:
     ansi:
       enabled: always
 server:
   port: 9999
+
+
+logging:
+  level:
+    com.company.project.system.dao: debug
 
 
 

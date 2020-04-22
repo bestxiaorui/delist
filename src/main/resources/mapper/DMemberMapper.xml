@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.company.project.system.dao.DMemberMapper">
+    <select id="getMemberList" resultType="com.company.project.system.entity.vo.DMemberVo">
+        SELECT
+        m.id,
+        m.code,
+        m.ORGANIZATION,
+        m.E_MAIL,
+        m.CREDIT_CODE,
+        m.OPENING_BANK,
+        m.BANK_ACCOUNT,
+        mt.NAME dept_name,
+        de.NAME member_type
 
+        FROM
+        D_MEMBER m
+        LEFT JOIN D_MEMBER_TYPE mt ON (m.D_MEMBER_TYPE_ID = mt.ID)
+        LEFT JOIN D_DEPT de ON (m.D_DEPT_ID = de.ID )
+        ${ew.customSqlSegment}
+    </select>
+
+    <select id="getMemberVoById" parameterType="string" resultType="com.company.project.system.entity.vo.DMemberVo">
+        SELECT
+        m.id,
+        m.code,
+        m.ORGANIZATION,
+        m.E_MAIL,
+        m.CREDIT_CODE,
+        m.OPENING_BANK,
+        m.BANK_ACCOUNT,
+        mt.NAME dept_name,
+        de.NAME member_type
+
+        FROM
+        D_MEMBER m
+        LEFT JOIN D_MEMBER_TYPE mt ON (m.D_MEMBER_TYPE_ID = mt.ID)
+        LEFT JOIN D_DEPT de ON (m.D_DEPT_ID = de.ID )
+        WHERE
+        m.ID=#{id}
+    </select>
+
+    <update id="updateEmailById" parameterType="com.company.project.system.entity.vo.DMemberUpdateVo">
+        UPDATE
+        D_MEMBER
+        SET E_MAIL=#{eMail}
+        WHERE id=#{id}
+    </update>
 </mapper>
