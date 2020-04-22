@@ -20,7 +20,7 @@ import java.io.Serializable;
 public class DMember implements Serializable {
 
 
-    private Integer id;
+    private String id;
 
     private String code;
 
@@ -34,9 +34,9 @@ public class DMember implements Serializable {
 
     private String bankAccount;
 
-    private Integer dDeptId;
+    private String dDeptId;
 
-    private Integer dMemberTypeId;
+    private String dMemberTypeId;
 
 
 }

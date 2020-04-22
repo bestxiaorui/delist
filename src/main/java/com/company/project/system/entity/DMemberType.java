@@ -20,7 +20,7 @@ import java.io.Serializable;
 public class DMemberType implements Serializable {
 
 
-    private Integer id;
+    private String id;
 
     private String name;
 

@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 public class DDelistNotice implements Serializable {
 
 
-    private Integer id;
+    private String id;
 
     private String type;
 
@@ -31,7 +31,7 @@ public class DDelistNotice implements Serializable {
 
     private LocalDateTime publicTime;
 
-    private Integer dDeptId;
+    private String dDeptId;
 
     private Integer upTimes;
 

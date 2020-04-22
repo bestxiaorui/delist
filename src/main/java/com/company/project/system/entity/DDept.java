@@ -20,7 +20,7 @@ import java.io.Serializable;
 public class DDept implements Serializable {
 
 
-    private Integer id;
+    private String id;
 
     private String name;
 

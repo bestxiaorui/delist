@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 public class DBanner implements Serializable {
 
 
-    private Integer id;
+    private String id;
 
     private String name;
 
@@ -39,9 +39,9 @@ public class DBanner implements Serializable {
 
     private LocalDateTime updateTime;
 
-    private Integer createUserId;
+    private String createUserId;
 
-    private Integer parentId;
+    private String parentId;
 
 
 }

@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 public class DGeneralNotice implements Serializable {
 
 
-    private Integer id;
+    private String id;
 
     private String title;
 
@@ -41,9 +41,9 @@ public class DGeneralNotice implements Serializable {
 
     private LocalDateTime updateTime;
 
-    private Integer createUserId;
+    private String createUserId;
 
-    private Integer updateUserId;
+    private String updateUserId;
 
 
 }

@@ -1,4 +1,4 @@
-package com.company.project.system.restcontroller;
+package com.company.project.system.restController;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-04-20
  */
 @RestController
-@RequestMapping("/core/d-general-notice")
-public class DGeneralNoticeController {
+@RequestMapping("/banner")
+public class DBannerController {
 
 }

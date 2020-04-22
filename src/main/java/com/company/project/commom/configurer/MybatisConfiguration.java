@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @Configuration
 @MapperScan("com.company.project.*.dao")
-public class MybatisConfigurer {
+public class MybatisConfiguration {
 
     @Bean
     public PaginationInterceptor paginationInterceptor() {

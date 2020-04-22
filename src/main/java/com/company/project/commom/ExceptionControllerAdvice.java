@@ -33,7 +33,7 @@ public class ExceptionControllerAdvice {
     public ApiResponse methodArgumentNotValidExceptionHandler(MethodArgumentNotValidException e){
         log.error("捕获到MethodArgumentNotValidException异常",e);
 
-        return ApiResponse.ofFail(e.getMessage());
+        return ApiResponse.ofFail(e.getBindingResult().getAllErrors().get(0).getDefaultMessage());
     }
 //    /**
 //     * 其他异常统一拦截

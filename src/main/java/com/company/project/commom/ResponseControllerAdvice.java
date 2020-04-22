@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
  * 对RestController返回结果统一包装
  */
 @Slf4j
-@RestControllerAdvice(basePackages = {"com.company.project"})
+@RestControllerAdvice(basePackages = {"com.company.project.system.restController"})
 public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
     @Override
     public boolean supports(MethodParameter returnType, @NonNull Class<? extends HttpMessageConverter<?>>  aClass) {

@@ -14,5 +14,10 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface DUserMapper extends BaseMapper<DUser> {
-
+    /**
+     * 检查用户是否存在
+     * @param name 用户名
+     * @return 1 存在 0 不存在
+     */
+    int checkExist(String name);
 }
